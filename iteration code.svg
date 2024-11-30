@@ -1,0 +1,15 @@
+import time
+
+def iterativefactorial(x):
+    factorial = 1
+    for i in range(1, x + 1):
+        factorial *= i
+    return factorial
+
+number = int(input("Enter number to find its factorial: "))
+start_time = time.perf_counter_ns()
+factorial = iterativefactorial(number)
+end_time = time.perf_counter_ns()
+elapsed_time_ns = end_time - start_time
+print(f"Factorial of {number} is {factorial}")
+print(f"Running taken: {elapsed_time_ns} microseconds")

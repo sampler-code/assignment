@@ -1,0 +1,17 @@
+import time
+
+def recursivefactorial(x):
+    if x == 0 or x == 1:
+        return 1
+    return x * recursivefactorial(x - 1)
+
+number = int(input("Enter number to find its factorial: "))
+
+start_time = time.perf_counter_ns()
+factorial = recursivefactorial(number)
+end_time = time.perf_counter_ns()
+
+elapsed_time_ns = end_time - start_time
+
+print(f"Factorial of  {number} is {factorial}")
+print(f"Running time: {elapsed_time_ns} microseconds") 
